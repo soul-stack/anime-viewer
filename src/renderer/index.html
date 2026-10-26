@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; worker-src 'self' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' https: http: data:; media-src 'self' https: http: blob:; connect-src 'self' https: http: blob: data:;">
+  <title>AniView</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/sidebar.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="stylesheet" href="styles/detail.css">
+  <link rel="stylesheet" href="styles/player.css">
+  <link rel="stylesheet" href="styles/category.css">
+</head>
+<body>
+  <!-- 自定义标题栏 -->
+  <div id="titlebar">
+    <div class="titlebar-drag">
+      <span class="titlebar-title">AniView</span>
+    </div>
+    <div class="titlebar-controls">
+      <button class="titlebar-btn" id="btn-minimize">&#x2500;</button>
+      <button class="titlebar-btn" id="btn-maximize">&#x25A1;</button>
+      <button class="titlebar-btn btn-close" id="btn-close">&#x2715;</button>
+    </div>
+  </div>
+
+  <div id="app">
+    <!-- 侧边栏 -->
+    <nav id="sidebar"></nav>
+
+    <!-- 主内容区 -->
+    <main id="content">
+      <div id="page-home" class="page active"></div>
+      <div id="page-detail" class="page"></div>
+      <div id="page-player" class="page"></div>
+      <div id="page-favorites" class="page"></div>
+      <div id="page-history" class="page"></div>
+      <div id="page-category" class="page"></div>
+    </main>
+  </div>
+
+  <!-- Toast 容器 -->
+  <div id="toast-container"></div>
+
+  <!-- HLS.js (will be copied to assets by postinstall) -->
+  <script src="assets/hls.min.js"></script>
+
+  <!-- 应用脚本 -->
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/anime-card.js"></script>
+  <script src="js/components/search-bar.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/pages/home.js"></script>
+  <script src="js/pages/detail.js"></script>
+  <script src="js/pages/player.js"></script>
+  <script src="js/pages/favorites.js"></script>
+  <script src="js/pages/history.js"></script>
+  <script src="js/pages/category.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

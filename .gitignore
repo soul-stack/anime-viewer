@@ -1,0 +1,48 @@
+# Dependencies and generated playback assets (restored by npm ci/postinstall)
+node_modules/
+/src/renderer/assets/hls.min.js
+/src/renderer/assets/hls.min.js.map
+/src/renderer/assets/hls.LICENSE.txt
+
+# Build products and local verification/backup data
+dist/
+.repair-backup/
+.repair-verification/
+coverage/
+*.log
+*.tmp
+*.tsbuildinfo
+
+# Historical machine-specific diagnostics; maintained tests live in tests/
+/test-*.js
+/REPAIR-NOTES.md
+/*-FIX-*.md
+
+# Local secrets and user data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+aniview-data.json
+catalog-cache-*.json
+user-data/
+
+# Media and local archives are not part of the source repository
+*.mp4
+*.mkv
+*.webm
+*.m3u8
+*.zip
+*.7z
+*.asar
+*.exe
+
+# Editor/OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
